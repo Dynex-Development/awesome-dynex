@@ -13,6 +13,9 @@ large.json
 small.json
 mini.json
 
+# Credentials — never commit
+.env
+
 # Python
 __pycache__/
 *.py[cod]
@@ -25,7 +28,6 @@ build/
 .venv
 env/
 venv/
-
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb_checkpoint

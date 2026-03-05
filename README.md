@@ -133,27 +133,60 @@ Performance benchmarks comparing Dynex against classical and quantum hardware.
 
 ## Getting Started
 
-### Prerequisites
+### Install dependencies
+
+This repo uses [uv](https://docs.astral.sh/uv/) for fast, reproducible installs.
 
 ```bash
-pip install dynex
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone the repo
+git clone https://github.com/Dynex-Development/awesome-dynex.git
+cd awesome-dynex
+
+# Core dependencies only (dynex, dimod, numpy, jupyterlab, ...)
+uv sync
+
+# Core + quantum circuits (PennyLane, Qiskit)
+uv sync --extra circuits
+
+# Core + machine learning (PyTorch, scikit-learn, ...)
+uv sync --extra ml
+
+# Everything at once
+uv sync --extra all
 ```
 
-Set your API credentials in `~/.dynex/dynex.ini`:
+### Configure credentials
 
-```ini
-[DYNEX]
-API_KEY    = <your-api-key>
-API_SECRET = <your-api-secret>
-```
-
-### Running an Example
-
-Open any `.ipynb` notebook in JupyterLab or VS Code. Each notebook is self-contained and includes installation notes, code, and expected output.
+Create a `.env` file in the repo root:
 
 ```bash
-jupyter lab basics/beginners_guide_example_bqm.ipynb
+DYNEX_SDK_KEY=your-sdk-key
+DYNEX_GRPC_ENDPOINT=your-endpoint
 ```
+
+The SDK loads it automatically if `python-dotenv` is installed (included in the base dependencies). Alternatively, export variables directly in your shell:
+
+```bash
+export DYNEX_SDK_KEY=your-sdk-key
+export DYNEX_GRPC_ENDPOINT=your-endpoint
+```
+
+Or pass credentials explicitly in code:
+
+```python
+config = DynexConfig(sdk_key="your-sdk-key", grpc_endpoint="your-endpoint")
+```
+
+### Run a notebook
+
+```bash
+uv run jupyter lab
+```
+
+Then open any `.ipynb` from the file browser.
 
 ### Compute Backends
 
@@ -171,7 +204,3 @@ jupyter lab basics/beginners_guide_example_bqm.ipynb
 Full SDK documentation: [docs.dynexcoin.org](https://docs.dynexcoin.org)
 
 SDK repository: [Dynex-Development/PY-SDK-V2](https://github.com/Dynex-Development/PY-SDK-V2)
-
-## License
-
-[MIT](LICENSE)

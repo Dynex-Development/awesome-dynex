@@ -1,0 +1,86 @@
+[project]
+name = "awesome-dynex"
+version = "0.1.0"
+description = "Example notebooks for the Dynex neuromorphic quantum computing platform"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Core SDK
+    "dynex",
+    "dimod",
+    # Numerics / data
+    "numpy",
+    "pandas",
+    "scipy",
+    "sympy",
+    "networkx",
+    # QUBO / annealing helpers
+    "pyqubo",
+    "qubovert",
+    # Visualisation
+    "matplotlib",
+    "tqdm",
+    # Credentials via .env
+    "python-dotenv",
+    # Notebooks
+    "jupyterlab",
+    "ipykernel",
+]
+
+[project.optional-dependencies]
+# Quantum gate circuits: PennyLane, Qiskit
+circuits = [
+    "pennylane",
+    "pennylane-qiskit",
+    "qiskit",
+    "qiskit-ibm-runtime",
+]
+
+# Machine learning: PyTorch, sklearn, vision, NLP
+ml = [
+    "torch",
+    "torchvision",
+    "scikit-learn",
+    "scikit-image",
+    "opencv-python",
+    "gensim",
+    "nltk",
+    "yfinance",
+]
+
+# D-Wave compatibility (used in a few notebooks as fallback sampler)
+dwave = [
+    "dwave-ocean-sdk",
+]
+
+# Extra visualisation
+viz = [
+    "plotly",
+]
+
+# Everything at once
+all = [
+    "pennylane",
+    "pennylane-qiskit",
+    "qiskit",
+    "qiskit-ibm-runtime",
+    "torch",
+    "torchvision",
+    "scikit-learn",
+    "scikit-image",
+    "opencv-python",
+    "gensim",
+    "nltk",
+    "yfinance",
+    "dwave-ocean-sdk",
+    "plotly",
+    "autoqubo",
+]
+
+[tool.uv]
+# Prefer binary wheels — keeps install fast
+prerelease = "if-necessary-or-explicit"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
