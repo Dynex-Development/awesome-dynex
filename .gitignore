@@ -3,15 +3,14 @@
 *.dnx
 *.dnx.*
 
-# Large benchmark data files
-*.pkl
-*.dat
+# Large auto-downloaded datasets (run notebook to generate)
+machine_learning/datasets/MNIST*.pickle
+machine_learning/datasets/mnist_*.csv
+machine_learning/datasets/*.gz
 
-# Satellite / misc data
+# Temporary data
+*.dat
 *.json.gz
-large.json
-small.json
-mini.json
 
 # Credentials — never commit
 .env
