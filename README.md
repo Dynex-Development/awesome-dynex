@@ -202,4 +202,4 @@ Then open any `.ipynb` from the file browser.
 ## Documentation
 
 - SDK documentation: [Dynex Mintlify](https://dynex.mintlify.app/introduction)
-- SDK repository: [Dynex-Development/PY-SDK-V2](https://github.com/Dynex-Development/PY-SDK-V2)
+- SDK repository: [Dynex SDK on Github](https://github.com/Dynex-Development/py-sdk)
