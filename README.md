@@ -201,6 +201,5 @@ Then open any `.ipynb` from the file browser.
 
 ## Documentation
 
-Full SDK documentation: [docs.dynexcoin.org](https://docs.dynexcoin.org)
-
-SDK repository: [Dynex-Development/PY-SDK-V2](https://github.com/Dynex-Development/PY-SDK-V2)
+- SDK documentation: [Dynex Minlify](https://dynex.mintlify.app/introduction)
+- SDK repository: [Dynex-Development/PY-SDK-V2](https://github.com/Dynex-Development/PY-SDK-V2)
