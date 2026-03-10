@@ -1,6 +1,6 @@
 # Awesome Dynex [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated collection of example notebooks for the [Dynex](https://dynexcoin.org) neuromorphic quantum computing platform.
+> A curated collection of example notebooks for the [Dynex](https://dynex.co) qubit-agnostic computing platform.
 
 These notebooks demonstrate how to solve real-world problems using the Dynex SDK — from basic QUBO/BQM formulations to quantum machine learning and gate-circuit execution on the Dynex GPU/QPU network.
 
