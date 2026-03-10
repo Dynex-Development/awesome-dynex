@@ -192,14 +192,14 @@ Then open any `.ipynb` from the file browser.
 
 | Backend | Description |
 |---------|-------------|
-| `ComputeBackend.GPU` | Dynex neuromorphic GPU chips — recommended for production |
-| `ComputeBackend.QPU` | Dynex QPU network — `num_reads` 1–100, `annealing_time` 10–1000, `shots` up to 5 |
-| `ComputeBackend.CPU` | CPU-based simulation |
-| `ComputeBackend.LOCAL` | Local simulation for development |
+| `ComputeBackend.GPU` | GPU-based emulation (algorithmic qubits) |
+| `ComputeBackend.QPU` | Dynex QPU resources — `num_reads` 1–100, `annealing_time` 10–1000, `shots` up to 5 |
+| `ComputeBackend.CPU` | CPU-based emulation (algorithmic qubits) |
+| `ComputeBackend.LOCAL` | Local emulation for development |
 
 ---
 
 ## Documentation
 
-- SDK documentation: [Dynex Minlify](https://dynex.mintlify.app/introduction)
+- SDK documentation: [Dynex Mintlify](https://dynex.mintlify.app/introduction)
 - SDK repository: [Dynex-Development/PY-SDK-V2](https://github.com/Dynex-Development/PY-SDK-V2)
